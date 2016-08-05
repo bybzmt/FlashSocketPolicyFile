@@ -1,4 +1,4 @@
-package FlashSocketPolicyFile
+package flashpolicy
 
 import (
 	"io"
@@ -10,7 +10,7 @@ import (
 
 var xmlfile []byte
 
-func Server(add, domains, ports string) {
+func Server(addr, domains, ports string) {
 	lsn, err := net.Listen("tcp", addr)
 	if err != nil {
 		log.Fatal(err)

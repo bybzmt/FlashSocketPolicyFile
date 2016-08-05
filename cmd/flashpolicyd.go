@@ -2,10 +2,7 @@ package main
 
 import (
 	"flag"
-	"github.com/bybzmt/FlashSocketPolicyFile"
-	"log"
-	"net/http"
-	"strings"
+	"github.com/bybzmt/flashpolicy"
 )
 
 var addr = flag.String("addr", ":843", "listen ip:port")
@@ -15,5 +12,5 @@ var ports = flag.String("ports", "80", "etc. 507,516")
 func main() {
 	flag.Parse()
 
-	FlashSocketPolicyFile.Server(*addr, *domains, *ports)
+	flashpolicy.Server(*addr, *domains, *ports)
 }
